@@ -4,13 +4,6 @@ def after_load_game_file(game_table: dict) -> dict:
 # called after the items.json file has been loaded, before any item loading or processing has occurred
 # if you need access to the items after processing to add ids, etc., you should use the hooks in World.py
 def after_load_item_file(item_table: list) -> list:
-
-    num = 10
-    # for i in range(1, num-1):
-    item = {"count": f"{num}","name": "Progressive Chapter","category": ["Chapters"],"filler": True}
-
-    item_table.append(item)
-
     return item_table
 
 # NOTE: Progressive items are not currently supported in Manual. Once they are,
@@ -21,16 +14,7 @@ def after_load_progressive_item_file(progressive_item_table: list) -> list:
 # called after the locations.json file has been loaded, before any location loading or processing has occurred
 # if you need access to the locations after processing to add ids, etc., you should use the hooks in World.py
 def after_load_location_file(location_table: list) -> list:
-    num = 10
-    location = {"name": f"Chapter {1}", "category": ["Chapters"],"requires": []}
-    
-    location_table.append(location)
-    for i in range(2,num+1):
-        location = {"name": f"Chapter {i}", "category": ["Chapters"],"requires": [f"Progressive Chapter:{i-1}"]}
-        
-        location_table.append(location)
-
-    location = {"name": "Last Chapter", "victory": True, "category": ["Chapters"],"requires": [f"Progressive Chapter:{num+1}"]}
+    location = {"name": f"Chapter {1}", "category": ["Chapters"],"requires": []}    
     location_table.append(location)
     return location_table
 

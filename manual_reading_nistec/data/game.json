@@ -3,5 +3,11 @@
   "game": "reading",
   "creator": "Nistec",
   "filler_item_name": "Filler",
-  "starting_items": []
+  "starting_items": [
+    {
+      "items": [
+        "Progressive Chapter"
+      ]
+    }
+  ]
 }

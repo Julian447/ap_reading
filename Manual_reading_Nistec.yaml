@@ -7,3 +7,10 @@ Manual_reading_Nistec:
   progression_balancing: 50
   accessibility: items
   num_chapters: 5
+  "starting_items": [
+    {
+      "items": [
+        "Progressive Chapter"
+      ]
+    }
+  ]
